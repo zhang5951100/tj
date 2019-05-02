@@ -1,0 +1,23 @@
+<group wx:if="{{PageCur=='group'}}"></group>
+<introduction wx:if="{{PageCur=='introduction'}}"></introduction>
+<my wx:if="{{PageCur=='my'}}"></my>
+<view class="cu-bar tabbar bg-white shadow foot">
+  <view class="action" bindtap="NavChange" data-cur="group">
+    <view class='cuIcon-cu-image'>
+      <image src="/img/service{{PageCur=='group'?'_fill':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='group'?'text-red':'text-gray'}}">团购</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="introduction">
+    <view class='cuIcon-cu-image'>
+      <image src="/img/document{{PageCur=='introduction'?'_fill':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='introduction'?'text-red':'text-gray'}}">介绍</view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="my">
+    <view class='cuIcon-cu-image'>
+      <image src="/img/addressbook{{PageCur=='my'?'_fill':''}}.png"></image>
+    </view>
+    <view class="{{PageCur=='my'?'text-red':'text-gray'}}">个人中心</view>
+  </view>
+</view>

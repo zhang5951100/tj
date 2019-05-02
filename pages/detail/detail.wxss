@@ -1,0 +1,4 @@
+/* pages/detail/detail.wxss */
+.bottom {
+  padding-bottom: 50px;
+}

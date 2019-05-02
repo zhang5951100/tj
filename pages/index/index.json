@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "group": "/pages/group/group",
+    "introduction": "/pages/introduction/introduction",
+    "my": "/pages/my/my"
+  }
+}

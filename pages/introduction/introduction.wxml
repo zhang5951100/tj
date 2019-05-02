@@ -1,0 +1,4 @@
+<!--pages/introduction/introduction.wxml-->
+<cu-custom bgColor="bg-gradual-orange padding radius text-center shadow-blur">
+  <view slot="content">介绍</view>
+</cu-custom>

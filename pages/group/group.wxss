@@ -1,0 +1,12 @@
+/* pages/group/group.wxss */
+
+.bottom {
+  padding-bottom: 50px;
+}
+
+.text-color {
+  color: #d81e06
+}
+.bgc{
+  background-color: #d81e06
+}

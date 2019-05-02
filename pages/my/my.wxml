@@ -1,0 +1,4 @@
+<!--pages/my/my.wxml-->
+<cu-custom bgColor="bg-gradual-orange padding radius text-center shadow-blur">
+  <view slot="content">个人中心</view>
+</cu-custom>
