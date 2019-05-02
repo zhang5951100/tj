@@ -124,5 +124,26 @@
     购物车
   </view>
   <view class="bg-orange submit">加入购物车</view>
-  <view class="bg-red submit">立即参团</view>
+  <view class="bg-red submit" bindtap="showModal" data-target="DialogModal2">立即参团</view>
+</view>
+
+<view class="cu-modal {{modalName=='DialogModal2'?'show':''}}">
+  <view class="cu-dialog">
+    <!-- <view class="cu-bar bg-white justify-end">
+      <view class="content">Modal标题</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view> -->
+    <view class="padding-xl">
+      购买数量: {{num}}
+    </view>
+    <view class="cu-bar bg-white">
+      <!-- <view class="action margin-0 flex-sub text-green " bindtap="hideModal">
+        <text class="cuIcon-moneybag"></text>微信支付
+      </view> -->
+      <view class="action margin-0 flex-sub text-green solid-left" bindtap="hideModal">取消</view>
+      <view class="action margin-0 flex-sub text-green  solid-left" bindtap="hideModal">确定</view>
+    </view>
+  </view>
 </view>
