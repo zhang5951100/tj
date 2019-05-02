@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    num: 0,
     groupHead: {
       nickname: 'izuul',
       img: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg',
@@ -43,14 +44,32 @@ Page({
       url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg'
     }],
   },
+  // 增加数量
+  addCount(e) {
+    // const index = e.currentTarget.dataset.index;
+    this.data.num++;
+    this.setData({
+      num: this.data.num
+    });
+  },
+  // 减少数量
+  minusCount(e) {
+    if (this.data.num > 0) {
+      this.data.num--;
+      this.setData({
+        num: this.data.num
+      });
+    }
+  },
+
   /**
- * 一键复制
- */
-  copy: function (e) {
+   * 一键复制
+   */
+  copy: function(e) {
     var that = this;
     wx.setClipboardData({
       data: that.data.groupHead.weixin,
-      success: function (res) {
+      success: function(res) {
         wx.showToast({
           title: '复制成功',
         });
@@ -58,7 +77,7 @@ Page({
     });
   },
 
-  call: function (e) {
+  call: function(e) {
     var that = this;
     wx.makePhoneCall({
       phoneNumber: that.data.groupHead.phone,
