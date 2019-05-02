@@ -19,11 +19,32 @@
 </view>
 <view class="cu-bar bg-white solid-bottom margin-top">
   <view class="action">
+    <text class="cuIcon-title text-orange "></text> 团长
+  </view>
+</view>
+<view class="cu-list menu-avatar">
+  <view class="cu-item">
+    <view class="cu-avatar radius lg" style="background-image:url({{groupHead.img}});"></view>
+    <view class="content">
+      <view class="text-grey">{{groupHead.nickname}}</view>
+      <view class="text-gray text-x flex justify-between">
+        <view class="flex bg-white">
+          <text bindtap="copy" class="cuIcon-weixin text-blue margin-right-xs" style='text-decoration-line: underline;'> {{groupHead.weixin}}</text>
+        </view>
+        <view class="flex bg-white">
+          <text bindtap="call" class="cuIcon-phone text-blue margin-right-xs" style='text-decoration-line: underline;'> {{groupHead.phone}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action">
     <text class="cuIcon-title text-orange "></text> 团购成员
   </view>
 </view>
 <view class="cu-list menu-avatar bottom">
-  <view class="cu-item ">
+  <view class="cu-item">
     <view class="cu-avatar radius lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png);"></view>
     <view class="content">
       <view class='text-gray'>
@@ -92,15 +113,5 @@
     购物车
   </view>
   <view class="bg-orange submit">加入购物车</view>
-  <view class="bg-red submit" bindtap="showModal" data-target="ChooseModal">立即参团</view>
-  <view class="cu-modal bottom-modal {{modalName=='ChooseModal'?'show':''}}" bindtap="hideModal">
-    <view class="cu-dialog" catchtap>
-      <view class="grid col-3 padding-sm">
-        111
-      </view>
-      <view class="padding flex flex-direction">
-        <button class="cu-btn bg-green margin-tb-sm lg">确认</button>
-      </view>
-    </view>
-  </view>
+  <view class="bg-red submit">立即参团</view>
 </view>

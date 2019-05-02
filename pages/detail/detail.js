@@ -5,8 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
+    groupHead: {
+      nickname: 'izuul',
+      img: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg',
+      weixin: '18525391110',
+      phone: '18525391110'
+    },
     imgList: [],
-    cardCur: 0,
+    // cardCur: 0,
     swiperList: [{
       id: 0,
       type: 'image',
@@ -36,6 +42,27 @@ Page({
       type: 'image',
       url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg'
     }],
+  },
+  /**
+ * 一键复制
+ */
+  copy: function (e) {
+    var that = this;
+    wx.setClipboardData({
+      data: that.data.groupHead.weixin,
+      success: function (res) {
+        wx.showToast({
+          title: '复制成功',
+        });
+      }
+    });
+  },
+
+  call: function (e) {
+    var that = this;
+    wx.makePhoneCall({
+      phoneNumber: that.data.groupHead.phone,
+    })
   },
   ViewImage(e) {
     console.log(e.currentTarget.dataset.url)

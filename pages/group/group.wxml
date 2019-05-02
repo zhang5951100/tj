@@ -4,11 +4,11 @@
 </cu-custom>
 <view class="cu-bar bg-white solid-bottom">
   <view class='action'>
-    <text class='cuIcon-titles text-orange '></text>全部
+    <text class='cuIcon-titles text-orange'></text>全部
   </view>
 </view>
 <view class='bottom'>
-  <view wx:for="{{groupBuyInfos}}">
+  <view wx:for="{{groupBuyInfos}}" wx:key>
     <navigator url="/pages/detail/detail?id={{item.id}}">
       <view class="cu-card case {{isCard?'no-card':''}}">
         <view class="cu-item shadow">
@@ -36,5 +36,4 @@
       </view>
     </navigator>
   </view>
-
 </view>
