@@ -22,7 +22,7 @@
     </view>
     <view class="flex bg-white">
       <!-- 增加减少数量按钮 -->
-      <text class="text-xxl {{num==0?'text-gray':''}}" space="emsp" bindtap="minusCount"> - </text>
+      <text class="text-xxl {{num==1?'text-gray':''}}" space="emsp" bindtap="minusCount"> - </text>
       <text class="bg-gray" space="emsp"> {{num}} </text>
       <text class="text-xxl" space="emsp" bindtap="addCount"> + </text>
     </view>

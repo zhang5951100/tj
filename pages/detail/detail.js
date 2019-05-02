@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    num: 0,
+    num: 1,
     groupHead: {
       nickname: 'izuul',
       img: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg',
@@ -54,7 +54,7 @@ Page({
   },
   // 减少数量
   minusCount(e) {
-    if (this.data.num > 0) {
+    if (this.data.num > 1) {
       this.data.num--;
       this.setData({
         num: this.data.num
